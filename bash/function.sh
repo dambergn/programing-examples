@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Passing arguments into function 
 function toRun () {
     value1="${1}" # $1 represent first argument
     value2="${2}" # $2 represent second argument
