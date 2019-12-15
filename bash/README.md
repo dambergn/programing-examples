@@ -48,11 +48,71 @@ name your-name-here
 - boolian
 
 ## User input
+```
+echo "type something in"
+read variable
+echo "you typed ${variable}"
+```
 
 ## if statements
+```
+if [ <check for something> ]; then
+  <do something>
+elif [<check for something else>]; then
+  <do something else>
+else [<last thing to check>]; then
+  <do last thing>
+fi
+```
 
 ## for loops
 
 ## while loops
 
 ## functions
+```
+function toRun () {
+    value1="${1}" # $1 represent first argument
+    value2="${2}" # $2 represent second argument
+    echo 'I have' ${value1}
+    echo 'This is how to' ${value2}
+}
+
+toRun "suceeded" "pass arguments into a function"
+```
+
+## STDOut to LOG files
+          || visible in terminal ||   visible in file   || existing
+  Syntax  ||  StdOut  |  StdErr  ||  StdOut  |  StdErr  ||   file   
+==========++==========+==========++==========+==========++===========
+    >     ||    no    |   yes    ||   yes    |    no    || overwrite
+    >>    ||    no    |   yes    ||   yes    |    no    ||  append
+          ||          |          ||          |          ||
+   2>     ||   yes    |    no    ||    no    |   yes    || overwrite
+   2>>    ||   yes    |    no    ||    no    |   yes    ||  append
+          ||          |          ||          |          ||
+   &>     ||    no    |    no    ||   yes    |   yes    || overwrite
+   &>>    ||    no    |    no    ||   yes    |   yes    ||  append
+          ||          |          ||          |          ||
+ | tee    ||   yes    |   yes    ||   yes    |    no    || overwrite
+ | tee -a ||   yes    |   yes    ||   yes    |    no    ||  append
+          ||          |          ||          |          ||
+ n.e. (*) ||   yes    |   yes    ||    no    |   yes    || overwrite
+ n.e. (*) ||   yes    |   yes    ||    no    |   yes    ||  append
+          ||          |          ||          |          ||
+|& tee    ||   yes    |   yes    ||   yes    |   yes    || overwrite
+|& tee -a ||   yes    |   yes    ||   yes    |   yes    ||  append
+
+### Examples
+```
+command > output.txt
+command >> output.txt
+command 2> output.txt
+command 2>> output.txt
+command &> output.txt
+command &>> output.txt
+command | tee output.txt
+command | tee -a output.txt
+command |& tee output.txt
+command |& tee -a output.txt
+```
