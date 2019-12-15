@@ -82,6 +82,7 @@ toRun "suceeded" "pass arguments into a function"
 ```
 
 ## STDOut to LOG files
+```
           || visible in terminal ||   visible in file   || existing
   Syntax  ||  StdOut  |  StdErr  ||  StdOut  |  StdErr  ||   file   
 ==========++==========+==========++==========+==========++===========
@@ -102,6 +103,7 @@ toRun "suceeded" "pass arguments into a function"
           ||          |          ||          |          ||
 |& tee    ||   yes    |   yes    ||   yes    |   yes    || overwrite
 |& tee -a ||   yes    |   yes    ||   yes    |   yes    ||  append
+```
 
 ### Examples
 ```
