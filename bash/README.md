@@ -60,7 +60,7 @@ if [ <check for something> ]; then
   <do something>
 elif [<check for something else>]; then
   <do something else>
-else [<last thing to check>]; then
+else
   <do last thing>
 fi
 ```
@@ -117,4 +117,16 @@ command | tee output.txt
 command | tee -a output.txt
 command |& tee output.txt
 command |& tee -a output.txt
+```
+
+## System Information
+
+### Check status of service
+```
+systemctl is-active --quiet <Service_Name> && echo Service is running
+```
+
+### This will check if the service is down and perform service restart
+```
+systemctl is-active --quiet <service name> || <service name> restart
 ```
