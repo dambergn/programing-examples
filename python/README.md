@@ -5,6 +5,13 @@ which python
 which python3
 #!/usr/bin/python3
 
+you can run a script via python3 name-of-script.py
+or
+put #!/usr/bin/python3 
+at top of file and make exicutable by
+sudo chmod +x name-of-script.py
+then run script with ./name-of-script.py
+
 ## Console output
 ```
 print("Hello World")
@@ -24,12 +31,47 @@ VARIABLE_LIST = ['one', 'two', 'three']
 ## Data types
 
 ## User input
+```
+VARIABLE = input()
+```
+
+## Boolian Values
+```
+== # Equal to
+!= # Not Equal to
+<  # Less Than
+>  # Greater Than
+<= # Less Than or Equal to
+>= # Greater than or equal to
+```
 
 ## if statements
+```
+if something == true:
+    # do something
+
+if something == false:
+    # do this
+else:
+    # do this instead
+
+if something < 9000:
+    # It's over 9000!!!
+elif something > 9000 and something < 0:
+    # Average power level
+else
+    # You are Yamcha
+```
 
 ## for loops
 
 ## while loops
+```
+counter = 0
+while counter < 5:
+    # do something
+    counter = counter +1 # incriments counter
+```
 
 ## functions
 ```
@@ -84,3 +126,9 @@ function_name()
 2 ** 3
 8
 ```
+
+## Built in functions
+len() # will give the length of a string or array
+str() # Will convert a int into a string
+int() # Defines the use of an intiger
+float() # Defines the use of a floating point number .01

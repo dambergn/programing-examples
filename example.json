@@ -12,5 +12,6 @@
     "c": "d",
     "e": "f"
   },
-  "string": "Hello World"
+  "string": "Hello World",
+  "naming": "cammel case and _ for variable naming"
 }
