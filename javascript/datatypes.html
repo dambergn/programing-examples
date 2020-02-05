@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data Types</title>
+</head>
+
+<body>
+  <h1>Data Types</h1>
+  <h2>Stacks</h2>
+
+  <h2>Queues</h2>
+
+  <script>
+    'use strict';
+    // queue: https://www.youtube.com/watch?v=bK7I79hcm08
+
+    // Queue
+    function Queue() {
+      let collection = [];
+      this.print = function () {
+        console.log(collection);
+      }
+      this.enqueue = function (element) {
+        collection.push(element)
+      }
+      this.dequeue = function () {
+        return collection.shift();
+      }
+      this.front = function () {
+        return collection[0];
+      }
+      this.size = function () {
+        return collection.length;
+      }
+      this.isEmpty = function () {
+        return (collection.lenght === 0);
+      }
+    }
+
+    console.log('**Queue example')
+    var q = new Queue();
+    q.enqueue('a')
+    q.enqueue('b')
+    q.enqueue('c')
+    q.print();
+    q.dequeue();
+    console.log(q.front());
+    q.print();
+
+    // Priority Queue
+    function PriorityQueue() {
+      let collection = [];
+      this.printCollection = function () {
+        console.log(collection);
+      }
+      this.enqueue = function (element, priority) {
+        element = [element, priority]
+        if (this.isEmpty()) {
+          collection.push(element);
+        } else {
+          var added = false;
+          for (var i = 0; i < collection.length; i++) {
+            if (element[1] < collection[i][1]) { //checking priorities
+              collection.splice(i, 0, element);
+              added = true;
+              break;
+            }
+          }
+          if (!added) {
+            collection.push(element);
+          }
+        }
+      };
+      this.dequeue = function () {
+        if (this.isEmpty()) {
+          return 'queue is empty'
+        } else {
+          let value = collection.shift();
+          return value[0];
+        }
+      }
+      this.front = function () {
+        return collection[0];
+      }
+      this.size = function () {
+        return collection.length;
+      }
+      this.isEmpty = function () {
+        return (collection.length === 0);
+      }
+    }
+
+    console.log('**Priority Queue example')
+    let pq = new PriorityQueue();
+    pq.enqueue('priority2', 2)
+    pq.enqueue('priority3', 3)
+    pq.enqueue('priority1', 1)
+    pq.enqueue('Second2', 2)
+    pq.enqueue('noPriority');
+    pq.printCollection();
+    console.log('dequing:', pq.dequeue());
+    console.log('next in queue:', pq.front());
+    pq.printCollection();
+    console.log('dequing:', pq.dequeue());
+    console.log('dequing:', pq.dequeue());
+    console.log('dequing:', pq.dequeue());
+    console.log('dequing:', pq.dequeue());
+    console.log('dequing:', pq.dequeue());
+    console.log('dequing:', pq.dequeue());
+  </script>
+</body>
+
+</html>

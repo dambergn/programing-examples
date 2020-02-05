@@ -18,7 +18,7 @@ array.shift()
 
 ### Remove from middle of array
 ```
-array.splice(i)
+array.splice(i, 1)
 ```
 
 ### Reverse order of items in array
