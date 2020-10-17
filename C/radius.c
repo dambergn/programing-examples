@@ -5,7 +5,7 @@ int main(){
     int radius;
     
     //printf to print to screen.
-    printf("Please enter a number:");
+    printf("Please enter the radius of a circle to get the area:");
     
     // scanf to get data from user.
     // &raidus reqired if modifying the variable.
@@ -16,7 +16,7 @@ int main(){
     double area = 3.14159 * (radius * radius);
 
     // %f is used for printing non hole numbers. (floating point numbers)
-    printf("The radius is %f\n", area);
+    printf("The given radius of %i is an area of %f\n", radius, area);
 
     return 0;
 }
