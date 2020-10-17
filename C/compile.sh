@@ -1,4 +1,8 @@
 #!/bin/bash
+# Version 0.1 beta
+# Updated 2020-10-16
+# Written by Nick Damberg
+# Perfected by No one
 
 echo "Which file would you like to compile and run?"
 read file
