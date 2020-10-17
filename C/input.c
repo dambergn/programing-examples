@@ -1,10 +1,17 @@
 #include <stdio.h>
 
 int main(){
-    int radius;
+    // number is the variable storage name.
+    int number;
+    
+    //printf to print to screen.
     printf("Please enter a number:");
-    scanf("%i", &radius);
+    
+    // scanf to get data from user.
+    // &number reqired if modifying the variable.
+    // "%i" Conversion character intiger
+    scanf("%i", &number);
 
-    printf("The given number is %i\n", radius);
+    printf("The number you entered is %i\n", number);
     return 0;
 }

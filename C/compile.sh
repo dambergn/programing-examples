@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 0.1 beta
+# Version 0.2 beta
 # Updated 2020-10-16
 # Written by Nick Damberg
 # Perfected by No one
@@ -25,18 +25,18 @@ win64 () {
 echo "Would you like to compile for Linux, Windows32, or Windows64?"
 read option
 
-if [ $option = "Linux" ]; then
+if [ "${option,,}" == "linux" ]; then
   linux
   echo "Running compiled program"
   ./$new_name
 fi
 
-if [ $option = "Windows32" ]; then
+if [ "${option,,}" == "Windows32" ]; then
   win32
   echo "Can not run windows executible on linux"
 fi
 
-if [ $option = "Windows64" ]; then
+if [ "${option,,}" == "Windows64" ]; then
   win64
   echo "Can not run windows executible on linux"
 fi
