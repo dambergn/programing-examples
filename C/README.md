@@ -42,3 +42,9 @@ i686-w64-mingw32-gcc -o hello32.exe hello.c
 x86_64-w64-mingw32-gcc -o hello64.exe hello.c
 ```
 - note text based apps will need to be run from cmd prompt
+
+### Conversion Characters
+- %f - Decimal Notation
+- %e - Scientific Notation
+- %g - Auto Assign
+ - If < -4 or > 5 then addigned to Decimal Else Scientific

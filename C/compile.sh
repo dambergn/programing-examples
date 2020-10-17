@@ -1,8 +1,12 @@
 #!/bin/bash
-# Version 0.2 beta
-# Updated 2020-10-16
-# Written by Nick Damberg
-# Perfected by No one
+# Version: 0.2 beta
+# Updated: 2020-10-17
+# Written by: Nick Damberg
+# Perfected by: No one
+# Use: This script is for quick compiling and testing of C code.
+# todo: Add compile time tracking.
+# todo: Add compile logging.
+# todo: Add C or C++ detection for compiling.
 
 echo "Which file would you like to compile and run?"
 read file
@@ -44,5 +48,5 @@ fi
 # echo "--compiling C code"
 # gcc $file
 
-# echo "--exicuting comiled code"
+# echo "--exicuting compiled code"
 # ./a.out
