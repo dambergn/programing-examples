@@ -20,12 +20,18 @@ Examples of various software
 
 ### Markdown
 
+### HTML/CSS
+
 ### Bash Scripting
 
 ### Javascript
 
+### NodeJS
+
 ### Python
 
 ### C
+
+### C++
 
 ### Arduino
