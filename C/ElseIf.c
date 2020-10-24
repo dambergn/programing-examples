@@ -24,6 +24,7 @@ int main(){
     printf("Searching for patient.\n");
   } else if (input == 4){
     printf("Exiting program, Have a nice day!\n");
+    return 0;
   } else {
     printf("That is not a valid option!");
   }
