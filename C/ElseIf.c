@@ -23,7 +23,18 @@ int main(){
   } else if (input == 3){
     printf("Searching for patient.\n");
   } else if (input == 4){
-    printf("Exiting program, Have a nice day!\n");
+    printf("Exiting program.\n");
+    printf("Would you like to save your changes? Y/N: ");
+    char q;
+    getchar();// Clears out new line character from previous scanf()
+    scanf("%c", &q);
+    if(q == 'y' || q == 'Y'){
+      printf("Saving Changes and exiting.\n");
+    } else if (q == 'n' || q == 'Y') {
+      printf("Exiting witout saving.\n");
+    } else {
+      printf("You have failed to follow instructions.\n");
+    }
     return 0;
   } else {
     printf("That is not a valid option!");

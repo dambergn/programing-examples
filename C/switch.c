@@ -2,7 +2,10 @@
 
 int main(){
 
-  int slices = 3;
+  printf("How many slices of pizza did yout eat (be honest): ");
+  int slices;
+  scanf("%d", &slices);
+  int caloriesPerSlice = 250;
 
   switch(slices){
     case 1:
@@ -21,6 +24,8 @@ int main(){
       printf("I just cant even!\n");
       break;
   }
+
+  printf("You had %d calories.\n", caloriesPerSlice * slices);
 
   return 0;
 }
