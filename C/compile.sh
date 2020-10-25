@@ -1,6 +1,6 @@
 #!/bin/bash
-# Version: 0.2 beta
-# Updated: 2020-10-17
+# Version: 0.3 beta
+# Updated: 2020-10-25
 # Written by: Nick Damberg
 # Perfected by: No one
 # Use: This script is for quick compiling and testing of C code.
@@ -15,15 +15,15 @@ echo "What would you like the output name of your file to be?"
 read new_name
 
 linux () {
-  gcc -o $new_name $file
+  gcc -o $new_name $file -lm
 }
 
 win32 () {
-  i686-w64-mingw32-gcc -o $new_name.exe $file
+  i686-w64-mingw32-gcc -o $new_name.exe $file -lm
 }
 
 win64 () {
-  x86_64-w64-mingw32-gcc -o $new_name.exe $file
+  x86_64-w64-mingw32-gcc -o $new_name.exe $file -lm
 }
 
 echo "Would you like to compile for Linux, Windows32, or Windows64?"
