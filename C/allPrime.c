@@ -2,10 +2,14 @@
 #include <stdbool.h>
 #include <math.h> // when using math compile with -lm
 #include <time.h>
+#include <stdlib.h> // Windows Only!
+// https://en.wikipedia.org/wiki/Largest_known_prime_number#:~:text=The%20largest%20known%20prime%20number,Search%20(GIMPS)%20in%202018.
 // Take an imput numer from user.
 // Calculate all prinme numbers from zero to user defined number.
 // print out all the found prime numbers.
 // Print how many prime numbers were found.
+
+// Try calculating 15000000
 
 bool isPrime(int input)
 {
@@ -48,5 +52,8 @@ int main()
   int timeEnd = time(NULL);
   int timeRun = timeEnd - timeStart;
   hms(timeRun);
+
+  system("pause"); // this will stop the pause 
+
   return 0;
 }
