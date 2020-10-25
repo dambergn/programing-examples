@@ -53,7 +53,7 @@ int main()
   int timeRun = timeEnd - timeStart;
   hms(timeRun);
 
-  system("pause"); // this will stop the pause 
+  system("pause"); // this will prevent windows from closeing after completion.
 
   return 0;
 }
