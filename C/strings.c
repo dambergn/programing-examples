@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(){
     printf("Hello you!\n");
@@ -11,5 +12,24 @@ int main(){
     scanf("%s", name);
 
     printf("Well Hello %s!\n", name);
+
+    // scanf will not take in spaces!
+    printf("What is your favorite food?: ");
+    char favFood[50];
+    scanf("%49s", favFood);
+    printf("%s\n", favFood);
+
+    int charCount = 0;
+    while(favFood[charCount] != '\0'){
+        charCount++;
+    }
+
+    printf("The character count by while loop is %d\n", charCount);
+
+    //or
+
+    int charCount2 = strlen(favFood); // requires sting.h to be included
+
+    printf("By stringLength: %d\n", charCount2);
     return 0;
 }
