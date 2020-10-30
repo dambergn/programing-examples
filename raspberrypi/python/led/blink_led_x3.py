@@ -10,7 +10,7 @@ red_led = 15
 
 GPIO.setup(green_led, GPIO.OUT)
 GPIO.setup(blue_led, GPIO.OUT)
-GPIO.setup(13, GPIO.OUT)
+GPIO.setup(red_led, GPIO.OUT)
 for x in range(0, 7):
     GPIO.output(green_led, True)
     time.sleep(.5)
