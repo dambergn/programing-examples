@@ -5,9 +5,11 @@ import time
 
 GPIO.setmode(GPIO.BOARD)
 # Connect to pin 7 not GPIO 7
-GPIO.setup(7, GPIO.OUT)
+servo = 18
 
-p = GPIO.PWM(7, 50)
+GPIO.setup(servo, GPIO.OUT)
+
+p = GPIO.PWM(servo, 50)
 p.start(7.5)
 
 try:
