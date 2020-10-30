@@ -2,9 +2,9 @@
 
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
-red = 11
-GPIO.setup(red, GPIO.OUT)
-my_pwm = GPIO.PWM(red, 100)
+blue_led = 7
+GPIO.setup(blue_led, GPIO.OUT)
+my_pwm = GPIO.PWM(blue_led, 100)
 my_pwm.start(100)
 while(1):
     # 100 for off to 0 for brightest

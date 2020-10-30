@@ -11,7 +11,7 @@ GPIO.setmode(GPIO.BOARD)
 # GPIO.setmode(GPIO.BCM)
 
 # Pin designators
-green_led = 11
+green_led = 7
 
 # Pin configuration
 GPIO.setup(green_led, GPIO.OUT)
