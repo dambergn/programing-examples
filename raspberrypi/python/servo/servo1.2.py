@@ -3,10 +3,12 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 
-servoPin = 7
-GPIO.setup(servoPin, GPIO.OUT)
+# Connect to pin 12 not GPIO 12
+servo = 12
 
-pwm = GPIO.PWM(servoPin, 50)
+GPIO.setup(servo, GPIO.OUT)
+
+pwm = GPIO.PWM(servo, 50)
 
 pwm.start(7.5)
 
