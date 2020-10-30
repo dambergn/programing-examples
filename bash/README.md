@@ -130,3 +130,8 @@ systemctl is-active --quiet <Service_Name> && echo Service is running
 ```
 systemctl is-active --quiet <service name> || <service name> restart
 ```
+
+### Get CPU temp
+```
+
+```
