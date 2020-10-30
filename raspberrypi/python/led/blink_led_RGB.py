@@ -14,6 +14,8 @@ GPIO.setup(red_led, GPIO.OUT)
 for x in range(0, 7):
     # Green LED
     GPIO.output(green_led, True)
+    GPIO.output(blue_led, False)
+    GPIO.output(red_led, False)
     time.sleep(.5)
     GPIO.output(green_led, False)
     time.sleep(.1)
