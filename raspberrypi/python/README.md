@@ -1,5 +1,15 @@
 # rpi-py-test-code
 Raspberry Pi Python Test Code
+
+## Install GPIO on Ubuntu
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python3-pip python-dev
+sudo pip3 install RPi.GPIO  
+sudo chmod og+rwx /dev/gpio*
+```
+
 ### To test python
 ```
 ./python1_test.py

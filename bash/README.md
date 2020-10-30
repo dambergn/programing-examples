@@ -133,5 +133,11 @@ systemctl is-active --quiet <service name> || <service name> restart
 
 ### Get CPU temp
 ```
+cat /sys/class/thermal/thermal_zone0/temp
+watch -n.1 "cat /sys/class/thermal/thermal_zone0/temp"
+```
 
+### Get CPU Frequency
+```
+watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""
 ```
