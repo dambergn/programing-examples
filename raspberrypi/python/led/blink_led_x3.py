@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import PRi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BOARD)
