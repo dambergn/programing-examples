@@ -5,7 +5,7 @@ import time
 
 GPIO.setmode(GPIO.BOARD)
 # Connect to pin 7 not GPIO 7
-servo = 18
+servo = 12
 
 GPIO.setup(servo, GPIO.OUT)
 
