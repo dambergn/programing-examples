@@ -29,4 +29,13 @@ for x in range(0, 7):
     time.sleep(.5)
     GPIO.output(red_led, False)
     time.sleep(.1)
+
+    # Purple
+    GPIO.output(blue_led, True)
+    GPIO.output(red_led, True)
+    time.sleep(.5)
+    GPIO.output(blue_led, False)
+    GPIO.output(red_led, False)
+    time.sleep(.1)
+    
 GPIO.cleanup()
