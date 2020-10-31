@@ -135,6 +135,10 @@ systemctl is-active --quiet <service name> || <service name> restart
 ```
 cat /sys/class/thermal/thermal_zone0/temp
 watch -n.1 "cat /sys/class/thermal/thermal_zone0/temp"
+# or
+apt-get install lm-sensors
+sensors-detect
+watch -n 1 sensors
 ```
 
 ### Get CPU Frequency
