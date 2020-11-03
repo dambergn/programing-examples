@@ -18,6 +18,10 @@ Examples of various software
 - while loops
 - functions
 
+## Project ideas
+- Password Generator
+- Password Manager
+
 ### Markdown
 
 ### HTML/CSS
