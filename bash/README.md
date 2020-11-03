@@ -141,3 +141,8 @@ watch -n.1 "cat /sys/class/thermal/thermal_zone0/temp"
 ```
 watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""
 ```
+
+### Check for failed SSH connections
+```
+grep sshd.\*Failed /var/log/auth.log | less
+```
