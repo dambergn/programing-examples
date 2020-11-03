@@ -145,3 +145,8 @@ watch -n 1 sensors
 ```
 watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""
 ```
+
+### Check for failed SSH connections
+```
+grep sshd.\*Failed /var/log/auth.log | less
+```
