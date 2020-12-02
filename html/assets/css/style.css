@@ -1,6 +1,7 @@
-header {
-    display: block;
-  }
+.container-1 div, .container-2 div, .container-0{
+  border:1px #ccc solid;
+  padding:10px;
+}
 
 .container-1{
   display:flex;
@@ -21,27 +22,22 @@ header {
   /* justify-content: space-evenly; */
 }
 
-.container-1 div, .container-2 div{
-  border:1px #ccc solid;
-  padding:10px;
-}
-
-.containter-1-box-1{
+.container-1-box-1{
   /* sets width */
   flex:2;
   order:2;
 }
 
-.containter-1-box-2{
+.container-1-box-2{
   flex:1;
   order:1;
 }
 
-.containter-1-box-3{
+.container-1-box-3{
   flex:1;
   order:3;
 }
 
-.containter-2-box{
+.container-2-box{
   flex-basis: 20%;
 }
