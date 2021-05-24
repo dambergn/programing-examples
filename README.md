@@ -41,3 +41,10 @@ Examples of various software
 ### Arduino
 
 ### Raspberry Pi
+
+## Generate SSH Keys
+```
+ssh-keygen -t ed25519
+# or
+ssh-keygen -t rsa -b 4096
+```
