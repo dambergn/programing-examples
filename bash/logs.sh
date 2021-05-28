@@ -1,4 +1,9 @@
 #!/bin/bash
+# Version: 1.0
+# Updated: 2020-02-22
+# Written by: Nick Damberg
+# Perfected by: No one
+# Tested OS: Ubuntu 16.04, 18.04, 20.04
 
 START=$(date +%T)
 NOW=$(date +"%Y-%m-%d-$START")
