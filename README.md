@@ -1,6 +1,13 @@
 # programing-examples
 Examples of various software
 
+## Generate SSH Keys
+```bash
+ssh-keygen -t ed25519
+# or
+ssh-keygen -t rsa -b 4096
+```
+
 ## Basics
 - Console output
 - Variables
@@ -41,10 +48,3 @@ Examples of various software
 ### Arduino
 
 ### Raspberry Pi
-
-## Generate SSH Keys
-```
-ssh-keygen -t ed25519
-# or
-ssh-keygen -t rsa -b 4096
-```
