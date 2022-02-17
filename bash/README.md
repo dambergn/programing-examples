@@ -31,8 +31,10 @@ To run the script from the directory where the script is contained
 ```
 
 ## Console output
+echo will automaticall create a new line while printf will require \n for a new line to be added.
 ```
 echo "Hello World"
+printf "Good bye"
 ```
 
 ## Variables
@@ -80,6 +82,8 @@ function toRun () {
 
 toRun "suceeded" "pass arguments into a function"
 ```
+
+## Math
 
 ## STDOut to LOG files
 ```
