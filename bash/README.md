@@ -66,6 +66,12 @@ fi
 ```
 
 ## for loops
+```
+for (( i=1; i<=10; i++ ))
+    do
+        echo "Iteration:$i"
+    done
+```
 
 ## while loops
 
