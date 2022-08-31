@@ -13,14 +13,14 @@ sudo chmod +x name-of-script.py
 then run script with ./name-of-script.py
 
 ## Console output
-```
+```py
 print("Hello World")
 print("Hello World's")
 print('Hello "World\'s"')
 ```
 
 ## Variables
-```
+```py
 VARIABLE_STRING = "string"
 VARIABLE_BOOLIEN = False
 VARIABLE_INTIGER = 
@@ -31,12 +31,12 @@ VARIABLE_LIST = ['one', 'two', 'three']
 ## Data types
 
 ## User input
-```
+```py
 VARIABLE = input()
 ```
 
 ## Boolian Values
-```
+```py
 == # Equal to
 != # Not Equal to
 <  # Less Than
@@ -46,7 +46,7 @@ VARIABLE = input()
 ```
 
 ## if statements
-```
+```py
 if something == true:
     # do something
 
@@ -66,7 +66,7 @@ else
 ## for loops
 
 ## while loops
-```
+```py
 counter = 0
 while counter < 5:
     # do something
@@ -74,7 +74,7 @@ while counter < 5:
 ```
 
 ## functions
-```
+```py
 def function_name()
     #do something
 
@@ -82,7 +82,7 @@ function_name()
 ```
 
 ## Math Examples
-```
+```py
 # Simple addition
 2 + 3
 5
@@ -128,7 +128,7 @@ function_name()
 ```
 
 ## Built in functions
-len() # will give the length of a string or array
-str() # Will convert a int into a string
-int() # Defines the use of an intiger
-float() # Defines the use of a floating point number .01
+len() # will give the length of a string or array  
+str() # Will convert a int into a string  
+int() # Defines the use of an intiger  
+float() # Defines the use of a floating point number .01  

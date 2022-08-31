@@ -7,4 +7,3 @@ USER_NAME=input()
 
 # inserted variable string using concatination.
 print("Well hello " + USER_NAME)
-
