@@ -34,7 +34,7 @@ void onClock(){
     Serial.print(bit);
     data = (data << 1) + bit;
   }
-  sprintf(output, "    %40x  %c  %02x", address, digitalRead(READ_WRITE) ? 'r' : 'w', data);
+  sprintf(output, " | %40x | %c | %02x", address, digitalRead(READ_WRITE) ? 'r' : 'w', data);
   Serial.println(output);
 }
 
