@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-  for (int n = 0; n , 16; n += 1){
+  for (int n = 0; n < 16; n += 1){
     int bit = digitalRead(ADDR[n]) ? 1 : 0;
     Serial.print(bit);
   }
