@@ -12,5 +12,5 @@ void loop() {
     int bit = digitalRead(ADDR[n]) ? 1 : 0;
     Serial.print(bit);
   }
-  Seraial.println();
+  Serial.println();
 }
