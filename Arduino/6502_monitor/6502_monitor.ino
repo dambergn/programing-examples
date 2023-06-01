@@ -4,6 +4,7 @@ void setup() {
   for (int n = 0; n < 16; n += 1){
     pinMode(ADDR[n], INPUT);
   }
+  Serial.begin(57600);
 }
 
 void loop() {
