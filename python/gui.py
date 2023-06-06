@@ -1,9 +1,20 @@
-# pip install customtkinter
-# https://github.com/TomSchimansky/CustomTkinter
+#!/usr/bin/python3
+
+# Windows install
+# pip install tk
+
+# Linux Install
+# sudo apt-get install python3-tk -y
+
+# https://docs.python.org/3/library/tkinter.html
 # https://www.youtube.com/watch?v=ibf5cx221hk
 
+# import sys
+# if sys.version_info[0] != 3:
+#     print("Please run as python3")
+#     exit
+
 import tkinter as tk
-# import customtkinter
 
 root = tk.Tk()
 
