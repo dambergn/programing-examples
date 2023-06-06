@@ -34,8 +34,12 @@ textbox.pack(padx=10)
 myentry = tk.Entry(root)
 myentry.pack(padx=10)
 
-button = tk.Button(root, text="Click Me!", font=('Arial, 18'))
+def buttonClick():
+    print("Button Clicked!")
+
+button = tk.Button(root, text="Click Me!", font=('Arial, 18'), command=buttonClick)
 button.pack(padx=10, pady=10)
+
 
 buttonframe = tk.Frame(root)
 buttonframe.columnconfigure(0, weight=1)
