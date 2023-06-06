@@ -132,3 +132,8 @@ len() # will give the length of a string or array
 str() # Will convert a int into a string  
 int() # Defines the use of an intiger  
 float() # Defines the use of a floating point number .01  
+
+## os_check.py
+Windows 11 = OS: nt | Platform: Windows | Release: 10
+Linux Ubuntu 20.04 = OS: posix | Platform: Linux | Release: 5.15.0-72-generic
+MacOS = 
