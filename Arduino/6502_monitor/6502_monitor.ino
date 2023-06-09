@@ -27,17 +27,19 @@ void onClock(){
     Serial.print(bit);
     address = (address << 1) + bit;
   }
+
   Serial.print(" | ");
+
   unsigned int data = 0;
   for (int n = 0; n < 8; n += 1){
     int bit = digitalRead(DATA[n]) ? 1 : 0;
     Serial.print(bit);
     data = (data << 1) + bit;
   }
-  sprintf(output, " | %40x | %c | %02x", address, digitalRead(READ_WRITE) ? 'r' : 'w', data);
+
+  sprintf(output, " | %04x | %c | %02x", address, digitalRead(READ_WRITE) ? 'r' : 'w', data);
   Serial.println(output);
 }
 
 void loop() {
-
 }
