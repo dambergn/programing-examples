@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-echo "explorign while loops"
+print("exploring while loops")
 
 name = ''
 

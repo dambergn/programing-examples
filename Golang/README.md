@@ -33,3 +33,24 @@ cd "your github username"
 mkdir "project name"
 
 ```
+
+## Go install
+Add to path  
+## Windows
+```
+setx GOPATH %USERPROFILE%\go
+setx path "%path%;%USERPROFILE%\bin"
+```
+## MAC & Linux
+```
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+```
+
+## Using go
+```
+# to run use
+go run file.go
+# to build
+go build file.go
+```
