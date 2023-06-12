@@ -22,6 +22,7 @@ class  MyGUI:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("My Second GUI")
+        self.root.eval("tk::PlaceWindow . center") # This is center of entire work env, so multiple screens cause it to not be actual center
 
         self.width=800
         self.height=500
