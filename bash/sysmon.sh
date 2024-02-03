@@ -4,11 +4,17 @@
 # sudo apt-get install jq
 # sudo apt-get install sensors
 
-# File to store the JSON data
+# File to store persistant data
 json_file="/tmp/system_info.json"
+log_file="/tmp/system_info.log"
+
+# Get Timestamps
+timestamp=$(date +"%Y%m%d%H%M%S")
+timestamp2=$(date "+%b %e %H:%M:%S")
 
 # Get system information
-timestamp=$(date +"%Y%m%d%H%M%S")
+hostname_var=$(hostname)
+
 load=$(uptime | awk -F'load average:' '{print $2}' | awk '{print $1}')
 
 # CPU functions
@@ -80,5 +86,10 @@ fi
 
 # Write the updated JSON back to the file
 echo "$updated_json_data" > "$json_file"
-
 echo "Data added to $json_file"
+
+# Write to logfile
+logfile="$timestamp2 $hostname_var load:$load cpu_usage:$cpu_usage cpu_temp:$cpu_temperature memory_usage:$memory_percentage disk_usage:$disk_usage i_node_usage:$inode_percentage"
+echo "$logfile" >> "$log_file"
+
+echo $logfile
