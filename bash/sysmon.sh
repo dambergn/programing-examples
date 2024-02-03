@@ -87,10 +87,9 @@ fi
 
 # Write the updated JSON back to the file
 echo "$updated_json_data" > "$json_file"
-echo "Data added to $json_file"
+# echo "Data added to $json_file"
 
 # Write to logfile
 logfile="$timestamp2 $hostname_var load:$load cpu_usage:$cpu_usage cpu_temp:$cpu_temperature memory_usage:$memory_percentage disk_usage:$disk_usage i_node_usage:$inode_percentage"
 echo "$logfile" >> "$log_file"
-
-echo $logfile
+# echo $logfile
