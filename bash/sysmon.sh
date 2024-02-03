@@ -1,12 +1,17 @@
 #!/bin/bash
+# Version: 0.3 beta
+# Updated: 2022-02-03
+# Written by: Nick Damberg
+# Perfected by: No one
+# Reccommended home /usr/local/bin/sysmon.sh
 
 ## Dependencies
-# sudo apt-get install jq
-# sudo apt-get install sensors
+# sudo apt-get install jq (needed for JSON)
+# sudo apt-get install sensors (needed for CPU temp)
 
 # File to store persistant data
-json_file="/tmp/system_info.json"
-log_file="/tmp/system_info.log"
+json_file="/tmp/system-info.json"
+log_file="/tmp/system-info.log"
 
 # Get Timestamps
 timestamp=$(date +"%Y%m%d%H%M%S")
