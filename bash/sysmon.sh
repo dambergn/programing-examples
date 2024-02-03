@@ -1,17 +1,48 @@
 #!/bin/bash
 
-# Dependencies
+## Dependencies
 # sudo apt-get install jq
+# sudo apt-get install sensors
 
 # File to store the JSON data
-json_file="system_info.json"
+json_file="/tmp/system_info.json"
 
 # Get system information
 timestamp=$(date +"%Y%m%d%H%M%S")
 load=$(uptime | awk -F'load average:' '{print $2}' | awk '{print $1}')
+
+# CPU functions
 cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
-memory_usage=$(free -m | awk '/Mem:/ {print $3}')
+
+# Check if the 'sensors' command is available
+if command -v sensors &> /dev/null; then
+    # Get CPU temperature
+    cpu_temperature=$(sensors | awk '/Core 0/ {print $3}' | tr -d '+°C')
+    # echo "CPU Temperature: $cpu_temperature"
+else
+    cpu_temperature="N/A"
+    echo "sensors command not found. Unable to retrieve CPU temperature."
+fi
+
+# memory_usage=$(free -m | awk '/Mem:/ {print $3}')
 disk_usage=$(df -h / | awk 'NR==2 {print $5}')
+
+# Get used and total memory in MB
+used_memory=$(free -m | awk '/Mem:/ {print $3}')
+total_memory=$(free -m | awk '/Mem:/ {print $2}')
+
+# Calculate the percentage of used memory
+memory_percentage=$(( (used_memory * 100) / total_memory ))
+
+# Set the path to the filesystem you want to check
+filesystem_path="/"
+
+# Get the used and total inodes
+used_inodes=$(df -i $filesystem_path | awk 'NR==2 {print $3}')
+total_inodes=$(df -i $filesystem_path | awk 'NR==2 {print $2}')
+
+# Calculate the percentage of used inodes
+inode_percentage=$(( (used_inodes * 100) / total_inodes ))
 
 # Create JSON response
 new_json_data=$(cat <<-EOF
@@ -20,8 +51,10 @@ new_json_data=$(cat <<-EOF
     "timestamp" : "$timestamp",
     "load": "$load",
     "cpu_usage": "$cpu_usage%",
-    "memory_usage": "${memory_usage}MB",
-    "disk_usage": "$disk_usage"
+    "cpu_temp": "$cpu_temperature",
+    "memory_usage": "$memory_percentage%",
+    "disk_usage": "$disk_usage",
+    "i_node_usage": "$inode_percentage%"
   }
 }
 EOF
