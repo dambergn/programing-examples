@@ -15,6 +15,7 @@ timestamp2=$(date "+%b %e %H:%M:%S")
 # Get system information
 hostname_var=$(hostname)
 
+# Get system load
 load=$(uptime | awk -F'load average:' '{print $2}' | awk '{print $1}')
 
 # CPU functions
